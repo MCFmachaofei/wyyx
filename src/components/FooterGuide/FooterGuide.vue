@@ -64,7 +64,7 @@
       text-align center
       flex-direction column
       align-items center
-      margin .3rem
+      margin .1rem
       color #999999
       &.on
         color #02a774

@@ -1,6 +1,7 @@
 <template>
 <div>
   <div id="app">
+    <HeaderTop/>
     <router-view/>
     <FooterGuide/>
   </div>
@@ -10,9 +11,12 @@
 
 <script>
   import FooterGuide from './components/FooterGuide/FooterGuide.vue'
+  import HeaderTop from './components/HeaderTop/HeaderTop.vue'
+
 export default {
   components:{
-    FooterGuide
+    FooterGuide,
+    HeaderTop
   }
 }
 </script>
