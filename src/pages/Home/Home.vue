@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <HeaderTop/>
     <!--轮播图-->
     <nav class="home_nav">
       <div class="swiper-container">
@@ -82,12 +83,6 @@
       <span class="txt">品牌制造商直供</span>
       <i class="iconfont icon-tiaozhuan"></i>
     </div>
-    <div class="show">
-        <img src="../../common/images/show/1.png"></img>
-        <img src="../../common/images/show/2.png"></img>
-        <img src="../../common/images/show/3.png"></img>
-        <img src="../../common/images/show/4.png"></img>
-    </div>
     <div class="goods">
       <span class="new">新品首发</span>
       <span class="all">查看全部</span>
@@ -95,9 +90,9 @@
     </div>
     <div class="goods_wrapper">
       <ul class="wrapper_content">
-        <li class="list">
+        <li>
           <img src="./images/xiaolongxia.png" alt="">
-          <p>十点一刻</p>
+          <div class="nowtime">十点一刻</div>
           <span class="introduce">小龙虾 4-6钱 1千克/盒 （800克虾+200克汤）</span>
           <div class="text">夏季爆品，媲美现煮</div>
           <div class="price">
@@ -105,9 +100,9 @@
             <span>88</span>
           </div>
         </li>
-        <li class="list">
+        <li>
           <img src="./images/xiaolongxia.png" alt="">
-          <p>十点一刻</p>
+          <div class="nowtime">十点一刻</div>
           <span class="introduce">小龙虾 4-6钱 1千克/盒 （800克虾+200克汤）</span>
           <div class="text">夏季爆品，媲美现煮</div>
           <div class="price">
@@ -115,9 +110,9 @@
             <span>88</span>
           </div>
         </li>
-        <li class="list">
+        <li>
           <img src="./images/xiaolongxia.png" alt="">
-          <p>十点一刻</p>
+          <div class="nowtime">十点一刻</div>
           <span class="introduce">小龙虾 4-6钱 1千克/盒 （800克虾+200克汤）</span>
           <div class="text">夏季爆品，媲美现煮</div>
           <div class="price">
@@ -125,9 +120,9 @@
             <span>88</span>
           </div>
         </li>
-        <li class="list">
+        <li>
           <img src="./images/xiaolongxia.png" alt="">
-          <p>十点一刻</p>
+          <div class="nowtime">十点一刻</div>
           <span class="introduce">小龙虾 4-6钱 1千克/盒 （800克虾+200克汤）</span>
           <div class="text">夏季爆品，媲美现煮</div>
           <div class="price">
@@ -135,9 +130,9 @@
             <span>88</span>
           </div>
         </li>
-        <li class="list">
+        <li>
           <img src="./images/xiaolongxia.png" alt="">
-          <p>十点一刻</p>
+          <div class="nowtime">十点一刻</div>
           <span class="introduce">小龙虾 4-6钱 1千克/盒 （800克虾+200克汤）</span>
           <div class="text">夏季爆品，媲美现煮</div>
           <div class="price">
@@ -145,9 +140,9 @@
             <span>88</span>
           </div>
         </li>
-        <li class="list">
+        <li>
           <img src="./images/xiaolongxia.png" alt="">
-          <p>十点一刻</p>
+          <div class="nowtime">十点一刻</div>
           <span class="introduce">小龙虾 4-6钱 1千克/盒 （800克虾+200克汤）</span>
           <div class="text">夏季爆品，媲美现煮</div>
           <div class="price">
@@ -155,9 +150,9 @@
             <span>88</span>
           </div>
         </li>
-        <li class="list">
+        <li>
           <img src="./images/xiaolongxia.png" alt="">
-          <p>十点一刻</p>
+          <div class="nowtime">十点一刻</div>
           <span class="introduce">小龙虾 4-6钱 1千克/盒 （800克虾+200克汤）</span>
           <div class="text">夏季爆品，媲美现煮</div>
           <div class="price">
@@ -165,9 +160,9 @@
             <span>88</span>
           </div>
         </li>
-        <li class="list">
+        <li>
           <img src="./images/xiaolongxia.png" alt="">
-          <p>十点一刻</p>
+          <div class="nowtime">十点一刻</div>
           <span class="introduce">小龙虾 4-6钱 1千克/盒 （800克虾+200克汤）</span>
           <div class="text">夏季爆品，媲美现煮</div>
           <div class="price">
@@ -175,9 +170,9 @@
             <span>88</span>
           </div>
         </li>
-        <li class="list">
+        <li>
           <img src="./images/xiaolongxia.png" alt="">
-          <p>十点一刻</p>
+          <div class="nowtime">十点一刻</div>
           <span class="introduce">小龙虾 4-6钱 1千克/盒 （800克虾+200克汤）</span>
           <div class="text">夏季爆品，媲美现煮</div>
           <div class="price">
@@ -185,9 +180,9 @@
             <span>88</span>
           </div>
         </li>
-        <li class="list">
+        <li>
           <img src="./images/xiaolongxia.png" alt="">
-          <p>十点一刻</p>
+          <div class="nowtime">十点一刻</div>
           <span class="introduce">小龙虾 4-6钱 1千克/盒 （800克虾+200克汤）</span>
           <div class="text">夏季爆品，媲美现煮</div>
           <div class="price">
@@ -206,9 +201,9 @@
       <ul class="faddish_content">
         <li>
           <img src="./images/yagao.png" alt="yagao">
-          <p>爆款</p>
-          <span class="introduce">日式和风声波式电动牙刷（可单买刷头）</span>
-          <div class="text">累计销量百万，洁齿必备基础款</div>
+          <div class="vogue">爆款</div>
+          <span class="presentation">日式和风声波式电动牙刷（可单买刷头）</span>
+          <div class="txt">累计销量百万，洁齿必备基础款</div>
           <div class="price">
             <span>¥</span>
             <span>129</span>
@@ -216,9 +211,9 @@
         </li>
         <li>
           <img src="./images/yagao.png" alt="yagao">
-          <p>爆款</p>
-          <span>日式和风声波式电动牙刷（可单买刷头）</span>
-          <div>累计销量百万，洁齿必备基础款</div>
+          <div class="vogue">爆款</div>
+          <span class="presentation">日式和风声波式电动牙刷（可单买刷头）</span>
+          <div class="txt">累计销量百万，洁齿必备基础款</div>
           <div class="price">
             <span>¥</span>
             <span>129</span>
@@ -226,9 +221,9 @@
         </li>
         <li>
           <img src="./images/yagao.png" alt="yagao">
-          <p>爆款</p>
-          <span>日式和风声波式电动牙刷（可单买刷头）</span>
-          <div>累计销量百万，洁齿必备基础款</div>
+          <div class="vogue">爆款</div>
+          <span class="presentation">日式和风声波式电动牙刷（可单买刷头）</span>
+          <div class="txt">累计销量百万，洁齿必备基础款</div>
           <div class="price">
             <span>¥</span>
             <span>129</span>
@@ -236,9 +231,9 @@
         </li>
         <li>
           <img src="./images/yagao.png" alt="yagao">
-          <p>爆款</p>
-          <span>日式和风声波式电动牙刷（可单买刷头）</span>
-          <div>累计销量百万，洁齿必备基础款</div>
+          <div class="vogue">爆款</div>
+          <span class="presentation">日式和风声波式电动牙刷（可单买刷头）</span>
+          <div class="txt">累计销量百万，洁齿必备基础款</div>
           <div class="price">
             <span>¥</span>
             <span>129</span>
@@ -246,9 +241,9 @@
         </li>
         <li>
           <img src="./images/yagao.png" alt="yagao">
-          <p>爆款</p>
-          <span>日式和风声波式电动牙刷（可单买刷头）</span>
-          <div>累计销量百万，洁齿必备基础款</div>
+          <div class="vogue">爆款</div>
+          <span class="presentation">日式和风声波式电动牙刷（可单买刷头）</span>
+          <div class="txt">累计销量百万，洁齿必备基础款</div>
           <div class="price">
             <span>¥</span>
             <span>129</span>
@@ -256,9 +251,9 @@
         </li>
         <li>
           <img src="./images/yagao.png" alt="yagao">
-          <p>爆款</p>
-          <span>日式和风声波式电动牙刷（可单买刷头）</span>
-          <div>累计销量百万，洁齿必备基础款</div>
+          <div class="vogue">爆款</div>
+          <span class="presentation">日式和风声波式电动牙刷（可单买刷头）</span>
+          <div class="txt">累计销量百万，洁齿必备基础款</div>
           <div class="price">
             <span>¥</span>
             <span>129</span>
@@ -266,9 +261,9 @@
         </li>
         <li>
           <img src="./images/yagao.png" alt="yagao">
-          <p>爆款</p>
-          <span>日式和风声波式电动牙刷（可单买刷头）</span>
-          <div>累计销量百万，洁齿必备基础款</div>
+          <div class="vogue">爆款</div>
+          <span class="presentation">日式和风声波式电动牙刷（可单买刷头）</span>
+          <div class="txt">累计销量百万，洁齿必备基础款</div>
           <div class="price">
             <span>¥</span>
             <span>129</span>
@@ -276,9 +271,9 @@
         </li>
         <li>
           <img src="./images/yagao.png" alt="yagao">
-          <p>爆款</p>
-          <span>日式和风声波式电动牙刷（可单买刷头）</span>
-          <div>累计销量百万，洁齿必备基础款</div>
+          <div class="vogue">爆款</div>
+          <span class="presentation">日式和风声波式电动牙刷（可单买刷头）</span>
+          <div class="txt">累计销量百万，洁齿必备基础款</div>
           <div class="price">
             <span>¥</span>
             <span>129</span>
@@ -286,9 +281,9 @@
         </li>
         <li>
           <img src="./images/yagao.png" alt="yagao">
-          <p>爆款</p>
-          <span>日式和风声波式电动牙刷（可单买刷头）</span>
-          <div>累计销量百万，洁齿必备基础款</div>
+          <div class="vogue">爆款</div>
+          <span class="presentation">日式和风声波式电动牙刷（可单买刷头）</span>
+          <div class="txt">累计销量百万，洁齿必备基础款</div>
           <div class="price">
             <span>¥</span>
             <span>129</span>
@@ -296,9 +291,9 @@
         </li>
         <li>
           <img src="./images/yagao.png" alt="yagao">
-          <p>爆款</p>
-          <span>日式和风声波式电动牙刷（可单买刷头）</span>
-          <div>累计销量百万，洁齿必备基础款</div>
+          <div class="vogue">爆款</div>
+          <span class="presentation">日式和风声波式电动牙刷（可单买刷头）</span>
+          <div class="txt">累计销量百万，洁齿必备基础款</div>
           <div class="price">
             <span>¥</span>
             <span>129</span>
@@ -306,9 +301,9 @@
         </li>
         <li>
           <img src="./images/yagao.png" alt="yagao">
-          <p>爆款</p>
-          <span>日式和风声波式电动牙刷（可单买刷头）</span>
-          <div>累计销量百万，洁齿必备基础款</div>
+          <div class="vogue">爆款</div>
+          <span class="presentation">日式和风声波式电动牙刷（可单买刷头）</span>
+          <div class="txt">累计销量百万，洁齿必备基础款</div>
           <div class="price">
             <span>¥</span>
             <span>129</span>
@@ -316,19 +311,9 @@
         </li>
         <li>
           <img src="./images/yagao.png" alt="yagao">
-          <p>爆款</p>
-          <span>日式和风声波式电动牙刷（可单买刷头）</span>
-          <div>累计销量百万，洁齿必备基础款</div>
-          <div class="price">
-            <span>¥</span>
-            <span>129</span>
-          </div>
-        </li>
-        <li>
-          <img src="./images/yagao.png" alt="yagao">
-          <p>爆款</p>
-          <span>日式和风声波式电动牙刷（可单买刷头）</span>
-          <div>累计销量百万，洁齿必备基础款</div>
+          <div class="vogue">爆款</div>
+          <span class="presentation">日式和风声波式电动牙刷（可单买刷头）</span>
+          <div class="txt">累计销量百万，洁齿必备基础款</div>
           <div class="price">
             <span>¥</span>
             <span>129</span>
@@ -336,26 +321,7 @@
         </li>
       </ul>
     </div>
-    <div class="item">
-      <div class="item_left">
-        <div class="item_left_title">严选限时购</div>
-        <div class="time">
-          <span class="hours">03</span>
-          <span class="colon">:</span>
-          <span class="mins">08</span>
-          <span class="colon">:</span>
-          <span class="secs">59</span>
-          <div class="next-title"></div>
-          <span>下一场 </span>
-          <span>18:00</span>
-          <span> 开始</span>
-        </div>
-      </div>
-      <div class="item_right">
-        <img src="./images/maojin.png" alt="maojin">
-        <div class="new_price">26</div>
-      </div>
-    </div>
+    <FlashSale/>
     <a href="javascript:;">
       <img src="./images/fls.jpg" alt="">
     </a>
@@ -363,28 +329,57 @@
       <span>专题精选</span>
       <i class="iconfont icon-dagou-copy"></i>
     </div>
-    <div></div>
+    <div class="haowu">居家好物</div>
+
+      <GoodThing :cateList="home.cateList"/>
+    <BottomFooter/>
   </div>
 </template>
 <script>
-  import BScroll from 'better-scroll'
+  import GoodThing from '../../components/GoodThing/GoodThing.vue'
+  import HeaderTop from '../../components/HeaderTop/HeaderTop.vue'
+  import FlashSale from '../../components/FlashSale/FlashSale.vue'
+  import BottomFooter from '../../components/BottomFooter/BottomFooter.vue'
+
+  import {mapState} from 'vuex'
+   import BScroll from 'better-scroll'
   import Swiper from 'swiper'
   import 'swiper/dist/css/swiper.min.css'
   export default {
-     mounted ( ) {
+    name:'Home',
+    data (){
+      return {
+        isSelected:false
+      }
+    },
+    components:{
+      HeaderTop,
+      FlashSale,
+      BottomFooter,
+      GoodThing
+    },
 
-        this.$nextTick(( ) => {
-          // 实现BScroll的实例是一个单例
-          this.scroll = new BScroll('.goods_wrapper', {
-            scrollX:true,
-          })
-        }),
-        this.$nextTick(( ) => {
-          // 实现BScroll的实例是一个单例
-          this.scroll = new BScroll('.faddish_wrapper', {
-            scrollX:true,
-          })
-        }),
+     mounted() {
+      this.$store.dispatch('getData',( )=>{
+        this.$nextTick(()=>{
+          this._initScroll()
+        })
+      })
+
+
+       this.$store.dispatch('getBanner')
+       /*new Swiper('.swiper-container',{
+         effect:"fade",
+         loop:true,
+         autoplay:{
+           autoplay:true,
+           delay:3000
+         },
+       })*/
+
+       this.$store.dispatch('getHome')
+
+
       new Swiper('.swiper-container', {
         pagination: {
           el: '.swiper-pagination',
@@ -392,11 +387,40 @@
         loop: true,
         autoplay: true,
       })
+    },
+    computed:{
+      ...mapState(['data','banner','home']),
+    },
+    methods:{
+      _initScroll() {
+        new BScroll('.goods_wrapper', {
+          scrollX:true,
+          click: true
+        }),
+          new BScroll('.faddish_wrapper', {
+            scrollX:true,
+            click: true
+          })
+       /*new BScroll('.hdScorllX', {
+          click: true,
+          scrollX: true
+        })*/
+
+        /*new BScroll('.m-goodGrid', {
+          click: true,
+          scrollX: true
+        })*/
+
+       /* new BScroll('.imgWrap', {
+          click: true,
+          scrollX: true
+        })*/
+      }
     }
   }
 
 </script>
-<style lang="stylus" rel="stylesheet/stylus">
+<style lang="stylus" rel="stylesheet/stylus" >
   .home
     width 100%
     color #7e8c8d
@@ -433,17 +457,24 @@
           margin-right 1rem
     .more
       text-align center
-    .show
-      float left
-      margin 2rem
-      img
-        width 5rem
-        height 5rem
-        float left
-        display flex
-        justify-content center
-        align-items center
-        padding .2rem
+    .list
+      list-style-type none
+      display block
+      .picture
+        color red
+        display list-item
+        .cnt
+          position absolute
+          left 0
+          top 0
+          padding .2rem 0 0 .2rem
+          width 100%
+          z-index 4
+          img
+            width 100%
+            height 100%
+
+
     .goods
       text-align center
       display block
@@ -458,18 +489,14 @@
         font-size .6rem
     .goods_wrapper
       display flex
-      justify-content center
-      align-items center
       font-size .1rem
       .wrapper_content
-        margin-left 5rem
         display flex
-        justify-content center
-        align-items center
         font-size .5rem
+        margin-left .7rem
         img
-          width 5rem
-        p
+          width 4.5rem
+        .nowtime
           background-color #f48f18
           color white
           font-size .5rem
@@ -481,7 +508,7 @@
           text-overflow ellipsis
           font-size .5rem
           display inline-block
-          width 4rem
+          width 3.5rem
         .text
           overflow hidden
           text-overflow ellipsis
@@ -512,29 +539,27 @@
          font-size .6rem
     .faddish_wrapper
       display flex
-      justify-content center
-      align-items center
       font-size .1rem
       .faddish_content
-        margin-left 5rem
         display flex
         font-size .5rem
+        margin-left .7rem
         img
-          width 5rem
-        p
+          width 4rem
+        .vogue
           background-color #f48f18
           color white
           font-size .5rem
           width 40%
           text-align center
-        .introduce
+        .presentation
           overflow hidden
           white-space nowrap
           text-overflow ellipsis
           font-size .5rem
           display inline-block
-          width 1rem
-        .text
+          width 3rem
+        .txt
           overflow hidden
           text-overflow ellipsis
           white-space nowrap
@@ -542,7 +567,7 @@
           color #7f7f7f
           padding .2rem
           line-height .5rem
-          width 2rem
+          width 3rem
         .price
           color #b4282d
           font-size .7rem
@@ -589,4 +614,13 @@
       color red
       img
         width 100%
+    .selection
+      text-align center
+      width 100%
+      height 2rem
+      margin-top 1rem
+    .haowu
+      text-align center
+      font-weight 700
+      height 1.5rem
 </style>
