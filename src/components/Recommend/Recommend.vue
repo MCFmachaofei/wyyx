@@ -1,98 +1,84 @@
 <template>
   <div class="wrapper">
     <ul class="content">
-      <li>
+      <li class="list">
         <div class="show">
           <img src="./images/1.png" alt="">
           <div class="topNum">317篇文章</div>
           <div class="Stitle">严选推荐</div>
         </div>
       </li>
-      <li>
+      <li class="list">
         <div class="show">
           <img src="./images/1.png" alt="">
           <div class="topNum">317篇文章</div>
           <div class="Stitle">严选推荐</div>
         </div>
       </li>
-      <li>
+      <li class="list">
         <div class="show">
           <img src="./images/1.png" alt="">
           <div class="topNum">317篇文章</div>
           <div class="Stitle">严选推荐</div>
         </div>
       </li>
-      <li>
+      <li class="list">
         <div class="show">
           <img src="./images/1.png" alt="">
           <div class="topNum">317篇文章</div>
           <div class="Stitle">严选推荐</div>
         </div>
       </li>
-      <li>
+      <li class="list">
         <div class="show">
           <img src="./images/1.png" alt="">
           <div class="topNum">317篇文章</div>
           <div class="Stitle">严选推荐</div>
         </div>
       </li>
-      <li>
+      <li class="list">
         <div class="show">
           <img src="./images/1.png" alt="">
           <div class="topNum">317篇文章</div>
           <div class="Stitle">严选推荐</div>
         </div>
       </li>
-      <li>
+      <li class="list">
         <div class="show">
           <img src="./images/1.png" alt="">
           <div class="topNum">317篇文章</div>
           <div class="Stitle">严选推荐</div>
         </div>
       </li>
-      <li>
+      <li class="list">
         <div class="show">
           <img src="./images/1.png" alt="">
           <div class="topNum">317篇文章</div>
           <div class="Stitle">严选推荐</div>
         </div>
       </li>
-      <li>
+      <li class="list">
         <div class="show">
           <img src="./images/1.png" alt="">
           <div class="topNum">317篇文章</div>
           <div class="Stitle">严选推荐</div>
         </div>
       </li>
-      <li>
+      <li class="list">
         <div class="show">
           <img src="./images/1.png" alt="">
           <div class="topNum">317篇文章</div>
           <div class="Stitle">严选推荐</div>
         </div>
       </li>
-      <li>
+      <li class="list">
         <div class="show">
           <img src="./images/1.png" alt="">
           <div class="topNum">317篇文章</div>
           <div class="Stitle">严选推荐</div>
         </div>
       </li>
-      <li>
-        <div class="show">
-          <img src="./images/1.png" alt="">
-          <div class="topNum">317篇文章</div>
-          <div class="Stitle">严选推荐</div>
-        </div>
-      </li>
-      <li>
-        <div class="show">
-          <img src="./images/1.png" alt="">
-          <div class="topNum">317篇文章</div>
-          <div class="Stitle">严选推荐</div>
-        </div>
-      </li>
-      <li>
+      <li class="list">
         <div class="show">
           <img src="./images/1.png" alt="">
           <div class="topNum">317篇文章</div>
@@ -121,7 +107,7 @@
     .content
       width 78rem
       color #7e8c8d
-      li
+      .list
         margin-right 1rem
         width 4.5rem
         height 5.5rem

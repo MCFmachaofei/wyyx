@@ -5,59 +5,10 @@
     <nav class="home_nav">
       <div class="swiper-container">
         <div class="swiper-wrapper">
-          <div class="swiper-slide">
+          <div class="swiper-slide" v-for="(item,index) in banner" :key="index">
             <a href="javascript:" class="link_to_food">
               <div class="food_container">
-                <img src="../../common/images/swiper/1.jpg">
-              </div>
-            </a>
-          </div>
-          <div class="swiper-slide">
-            <a href="javascript:" class="link_to_food">
-              <div class="food_container">
-                <img src="../../common/images/swiper/2.jpg">
-              </div>
-            </a>
-          </div>
-          <div class="swiper-slide">
-            <a href="javascript:" class="link_to_food">
-              <div class="food_container">
-                <img src="../../common/images/swiper/3.jpg">
-              </div>
-            </a>
-          </div>
-          <div class="swiper-slide">
-            <a href="javascript:" class="link_to_food">
-              <div class="food_container">
-                <img src="../../common/images/swiper/4.jpg">
-              </div>
-            </a>
-          </div>
-          <div class="swiper-slide">
-            <a href="javascript:" class="link_to_food">
-              <div class="food_container">
-                <img src="../../common/images/swiper/5.jpg">
-              </div>
-            </a>
-          </div>
-          <div class="swiper-slide">
-            <a href="javascript:" class="link_to_food">
-              <div class="food_container">
-                <img src="../../common/images/swiper/6.jpg">
-              </div>
-            </a>
-          </div>
-          <div class="swiper-slide">
-            <a href="javascript:" class="link_to_food">
-              <div class="food_container">
-                <img src="../../common/images/swiper/7.jpg">
-              </div>
-            </a>
-          </div>
-          <div class="swiper-slide">
-            <a href="javascript:" class="link_to_food">
-              <div class="food_container">
-                <img src="../../common/images/swiper/8.jpg">
+                <img :src="item.picUrl">
               </div>
             </a>
           </div>
@@ -83,6 +34,7 @@
       <span class="txt">品牌制造商直供</span>
       <i class="iconfont icon-tiaozhuan"></i>
     </div>
+    <DirectSupply/>
     <div class="goods">
       <span class="new">新品首发</span>
       <span class="all">查看全部</span>
@@ -330,17 +282,18 @@
       <i class="iconfont icon-dagou-copy"></i>
     </div>
     <div class="haowu">居家好物</div>
-
+    <GoTop/>
       <GoodThing :cateList="home.cateList"/>
     <BottomFooter/>
   </div>
 </template>
 <script>
+  import DirectSupply from '../../components/DirectSupply/DirectSupply.vue'
   import GoodThing from '../../components/GoodThing/GoodThing.vue'
   import HeaderTop from '../../components/HeaderTop/HeaderTop.vue'
   import FlashSale from '../../components/FlashSale/FlashSale.vue'
   import BottomFooter from '../../components/BottomFooter/BottomFooter.vue'
-
+  import GoTop from '../../components/GoTop/GoTop.vue'
   import {mapState} from 'vuex'
   import BScroll from 'better-scroll'
   import Swiper from 'swiper'
@@ -356,7 +309,9 @@
       HeaderTop,
       FlashSale,
       BottomFooter,
-      GoodThing
+      GoodThing,
+      GoTop,
+      DirectSupply
     },
 
      mounted() {
@@ -368,18 +323,15 @@
 
 
        this.$store.dispatch('getBanner')
-       /*new Swiper('.swiper-container',{
-         effect:"fade",
+       new Swiper('.swiper-container',{
          loop:true,
          autoplay:{
            autoplay:true,
            delay:3000
          },
-       })*/
+       })
 
        this.$store.dispatch('getHome')
-
-
       new Swiper('.swiper-container', {
         pagination: {
           el: '.swiper-pagination',
@@ -401,20 +353,7 @@
             scrollX:true,
             click: true
           })
-       /*new BScroll('.hdScorllX', {
-          click: true,
-          scrollX: true
-        })*/
 
-        /*new BScroll('.m-goodGrid', {
-          click: true,
-          scrollX: true
-        })*/
-
-       /* new BScroll('.imgWrap', {
-          click: true,
-          scrollX: true
-        })*/
       }
     }
   }

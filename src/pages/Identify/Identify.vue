@@ -8,12 +8,12 @@
     </div>
     <div class="swiper-container">
       <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img src="./images/1.jpg" alt="">
+        <div class="swiper-slide" v-for="(item,index) in detail.banner" :key="index">
+          <img :src="item.picUrl">
           <div class="content">
-            <div class="subTitle">严选推荐</div>
-            <div class="title">夏日小仙女养成记</div>
-            <div class="desc">页面内商品每满179立减20</div>
+            <div class="subTitle">{{item.subTitle}}</div>
+            <div class="title">{{item.title}}</div>
+            <div class="desc">{{item.desc}}</div>
           </div>
         </div>
       </div>
@@ -28,17 +28,44 @@
         <span class="item_right">9.9元起</span>
       </div>
     </div>
+    <!--<div class="rItem">
+      <div class="rItem_left">
+        <div class="author-container">
+          <div class="avatar">
+            <img src="./images/avatar.png">
+          </div>
+          <div class="nickname">丁磊</div>
+          <div class="rTitle">懒人抹布，从此告别洗抹布</div>
+          <div class="subTitle">16卷囤货装低至163元</div>
+        </div>
+      </div>
+      <div class="rItem_right">
+        <img src="./images/3.jpg">
+        <div class="exploreTag">丁磊的好货推荐</div>
+      </div>
+    </div>-->
+    <DetailFindMore :detail="detail"/>
+    <GoTop/>
   </div>
 </template>
 <script>
+  import {mapState} from 'vuex'
+  import GoTop from '../../components/GoTop/GoTop.vue'
   import Recommend from '../../components/Recommend/Recommend.vue'
+   import DetailFindMore from '../../components/DetailFindMore/DetailFindMore.vue'
   import Swiper from 'swiper'
   import 'swiper/dist/css/swiper.min.css'
   export default {
     components:{
-      Recommend
+      Recommend,
+      GoTop,
+      DetailFindMore
+    },
+    computed:{
+      ...mapState(['detail'])
     },
     mounted(){
+      this.$store.dispatch('getDetail')
       new Swiper('.swiper-container', {
         slidesPerView: 1.15,
         centeredSlides: true,
@@ -93,8 +120,8 @@
           align-items center
           justify-content center
           flex-direction column
-          width 7rem
-          height 3rem
+          width 9rem
+          height 4rem
           background-color rgba(255,255,255,.9)
           .subTitle
             position relative
@@ -103,7 +130,7 @@
             line-height .4rem
             padding .2rem
           .title
-            font-size .8rem
+            font-size .6rem
             line-height .65rem
             color #333
             margin .3rem
@@ -140,4 +167,43 @@
         bottom 1px solid #d9d9d9
         color #333
         font-size .5rem
+      .item
+        font-size .8rem
+        float right
+        color #333
+        .item_left
+          flex 1
+          margin-right 4rem
+          text-overflow ellipsis
+          white-space nowrap
+          overflow hidden
+        .item_right
+          text-overflow ellipsis
+          white-space nowrap
+          overflow hidden
+
+    .rItem
+      color red
+      .rItem_left
+        color #7e8c8d
+        display flex
+        flex-direction column
+        .avatar
+          width .1rem
+          img
+            width 1rem
+            border-radius 50%
+        .nickname
+          font-size .5rem
+        .rTitle
+          font-size .6rem
+        .subTitle
+          font-size .8rem
+      .rItem_right
+          position relative
+          img
+            width 6rem
+            height 6rem
+          .exploreTag
+            position absolute
 </style>
