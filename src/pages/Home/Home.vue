@@ -343,6 +343,19 @@
     computed:{
       ...mapState(['data','banner','home']),
     },
+    watch:{
+      banner(){
+        this.$nextTick(() => {
+          new Swiper('.swiper-container',{
+            loop:true,
+            autoplay:{
+              autoplay:true,
+              delay:3000
+            },
+          })
+        })
+      }
+    },
     methods:{
       _initScroll() {
         new BScroll('.goods_wrapper', {

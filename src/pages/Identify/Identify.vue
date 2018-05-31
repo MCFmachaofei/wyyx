@@ -1,11 +1,6 @@
 <template>
   <div class="Inentify">
-    <div class="Inentify_head">
-      <i class="iconfont icon-shouye"></i>
-      <span>网易严选</span>
-      <i class="iconfont icon-geren"></i>
-      <i class="iconfont icon-gouwuche2"></i>
-    </div>
+    <IdentHeader/>
     <div class="swiper-container">
       <div class="swiper-wrapper">
         <div class="swiper-slide" v-for="(item,index) in detail.banner" :key="index">
@@ -52,31 +47,40 @@
   import {mapState} from 'vuex'
   import GoTop from '../../components/GoTop/GoTop.vue'
   import Recommend from '../../components/Recommend/Recommend.vue'
-   import DetailFindMore from '../../components/DetailFindMore/DetailFindMore.vue'
+  import IdentHeader from '../../components/IdentHeader/IdentHeader.vue'
+  import DetailFindMore from '../../components/DetailFindMore/DetailFindMore.vue'
   import Swiper from 'swiper'
   import 'swiper/dist/css/swiper.min.css'
   export default {
     components:{
       Recommend,
       GoTop,
-      DetailFindMore
+      DetailFindMore,
+      IdentHeader
     },
     computed:{
       ...mapState(['detail'])
     },
+    watch:{
+      detail(){
+        this.$nextTick(() => {
+          new Swiper('.swiper-container', {
+            slidesPerView: 1.15,
+            centeredSlides: true,
+            onInit: function (swiper) {
+              swiper.slides[1].className = 'swiper-slide swiper-slide-active'
+            },
+            loop: true,
+            spaceBetween: 10,
+            autoplay: true
+
+          })
+        })
+      }
+    },
     mounted(){
       this.$store.dispatch('getDetail')
-      new Swiper('.swiper-container', {
-        slidesPerView: 1.15,
-        centeredSlides: true,
-        onInit: function (swiper) {
-          swiper.slides[1].className = 'swiper-slide swiper-slide-active'
-        },
-        loop: true,
-        spaceBetween: 10,
-        autoplay: true
 
-      })
     }
   }
 </script>
@@ -84,22 +88,6 @@
   @import "../../common/stylus/mixins.styl"
   .Inentify
     width 100%
-    .Inentify_head
-      width 100%
-      height 2.2rem
-      position fixed
-      background-color #fafafa
-      z-index 10
-      display flex
-      justify-content center
-      align-items center
-      .iconfont
-        font-size 1.2rem
-        letter-spacing .5rem
-      span
-        text-align center
-        margin-left 3.3rem
-        margin-right 3.3rem
     .swiper-container
       width 100%
       padding-top 3rem
