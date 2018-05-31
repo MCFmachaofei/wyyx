@@ -342,7 +342,7 @@
   import BottomFooter from '../../components/BottomFooter/BottomFooter.vue'
 
   import {mapState} from 'vuex'
-   import BScroll from 'better-scroll'
+  import BScroll from 'better-scroll'
   import Swiper from 'swiper'
   import 'swiper/dist/css/swiper.min.css'
   export default {
