@@ -4,7 +4,7 @@
     <img src="./images/wyyx.png">
     <div class="phone_login">
       <i class="iconfont icon-shouji"></i>
-      <span class="phone">手机号码登陆</span>
+      <span class="phone" @click="goPhoneLogin">手机号码登陆</span>
     </div>
     <div class="mail_login">
       <i class="iconfont icon-youxiang"></i>
@@ -35,6 +35,11 @@
   export default {
     components:{
     IdentHeader
+    },
+    methods:{
+      goPhoneLogin(){
+        this.$router.push('/login')
+      }
     }
   }
 </script>

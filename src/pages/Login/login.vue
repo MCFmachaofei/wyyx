@@ -1,38 +1,39 @@
 <template>
-  <div class="loginContainer">
+  <section class="loginContainer">
     <div class="loginInner">
       <div class="login_header">
-        <h2 class="login_logo">网易严选</h2>
+        <img src="../Person/images/wyyx.png">
         <div class="login_header_title">
-          <a href="javascript:;" class="on">短信登录</a>
-          <a href="javascript:;">密码登录</a>
+          <a href="javascript:;" :class="{on:loginWay}" @click="loginWay=true">短信登录</a>
+          <a href="javascript:;" :class="{on:!loginWay}" @click="loginWay=false">密码登录</a>
         </div>
       </div>
       <div class="login_content">
-        <form>
-          <div class="on">
+        <form @submit.prevent="login">
+          <div class="on" v-show="!loginWay">
             <section class="login_message">
-              <input type="tel" maxlength="11" placeholder="手机号">
+              <input type="tel" maxlength="11" placeholder="手机号" v-model="phone">
               <button disabled="disabled" class="get_verification" >获取验证码</button>
             </section>
             <section class="login_verification">
-              <input type="tel" maxlength="8" placeholder="验证码">
+              <input type="tel" maxlength="8" placeholder="验证码" v-model="code">
             </section>
             <section class="login_hint">
               温馨提示：未注册网易严选帐号的手机号，登录时将自动注册，且代表已同意
               <a href="javascript:;">《用户服务协议》</a>
             </section>
           </div>
-          <div>
+          <div class="on" v-show="loginWay">
             <section>
               <section class="login_message">
-                <input type="tel" maxlength="11" placeholder="手机/邮箱/用户名">
+                <input type="tel" maxlength="11" placeholder="手机/邮箱/用户名" v-model="name">
               </section>
               <section class="login_verification">
-                <input type="tel" maxlength="8" placeholder="密码">
-                <div class="switch_button off">
-                  <div class="switch_circle"></div>
-                  <span class="switch_text">...</span>
+                <input type="tel" maxlength="8" placeholder="密码" v-if="showPwd" v-model="pwd">
+                <input type="password" maxlength="8" placeholder="密码" v-else v-model="pwd">
+                <div class="switch_button" :class="showPwd?'on':'off'" @click="showPwd=!showPwd">
+                  <div class="switch_circle" :class="{right: showPwd}"></div>
+                  <span class="switch_text">{{showPwd ? 'abc' : '...'}}</span>
                 </div>
               </section>
               <section class="login_message">
@@ -44,16 +45,92 @@
         </form>
         <a href="javascript:;" class="about_us">关于我们</a>
       </div>
-      <span href="javascript:" class="go_back" @click="$router.back()">
+      <a href="javascript:" class="go_back" @click="$router.back()">
         <i class="iconfont icon-jiantou2"></i>
-      </span>
+      </a>
     </div>
-  </div>
+    <AlertTip :alertText="alertText" v-show="alertShow" @closeTip="closeTip"/>
+  </section>
 </template>
 
 <script>
+  import {mapState} from 'vuex'
+  import AlertTip from '../../components/AlertTip/AlertTip.vue'
   export default {
+    data () {
+      return {
+        loginWay: false, // true代表短信登陆, false代表密码
+        computeTime: 0, // 计时的时间
+        showPwd: false, // 是否显示密码
+        phone: '', // 手机号
+        code:'', // 短信验证码
+        name: '', // 用户名
+        pwd: '', // 密码
+        captcha: '', // 图形验证码
+        alertText: '', // 提示文本
+        alertShow: false, // 是否显示警告框
+      }
+    },
 
+    computed: {
+     /* ...mapState(['loginWay']),*/
+      rightPhone () {
+        return /^1\d{10}$/.test(this.phone)
+      }
+    },
+
+    methods: {
+      showAlert(alertText) {
+        this.alertShow = true
+        this.alertText = alertText
+      },
+      // 登陆
+      login () {
+        let result
+        // 前台表单验证
+        if(!this.loginWay) {  // 短信登陆
+          const {code} = this
+          if(!this.rightPhone) {
+            // 手机号不正确
+            this.showAlert('手机号不正确')
+            return
+          } else if(!/^\d{6}$/.test(code)) {
+            // 验证必须是6位数字
+            this.showAlert('验证必须是6位数字')
+            return
+          }
+        }
+        else {// 密码登陆
+          if(!this.name) {
+            // 用户名必须指定
+            this.showAlert('用户名必须指定')
+            return
+          } else if(!this.pwd) {
+            // 密码必须指定
+            this.showAlert('密码必须指定')
+            return
+          } else if(!this.captcha) {
+            // 验证码必须指定
+            this.showAlert('验证码必须指定')
+            return
+          }
+        }
+        this.showAlert('登陆成功,即将跳转到首页')
+        setTimeout(() => {
+          this.$router.replace('/home')
+          this.closeTip ()
+        },1000)
+
+      },
+      // 关闭警告框
+      closeTip () {
+        this.alertShow = false
+        this.alertText = ''
+      },
+    },
+    components: {
+      AlertTip
+    }
   }
 </script>
 
@@ -68,11 +145,9 @@
       width 80%
       margin 0 auto
       .login_header
-        .login_logo
-          font-size 40px
-          font-weight bold
-          color #b4282d
-          text-align center
+        img
+          width 10rem
+          margin-left 1.4rem
         .login_header_title
           padding-top 40px
           text-align center

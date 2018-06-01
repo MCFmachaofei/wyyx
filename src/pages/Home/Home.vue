@@ -243,15 +243,17 @@
       .wrapper_content
         display flex
         font-size .5rem
-        margin-left .7rem
+        margin-left .5rem
         img
-          width 4.5rem
+          width 4.3rem
         .nowtime
           background-color #f48f18
           color white
           font-size .5rem
-          width 45%
+          width 30%
           text-align center
+          height .8rem
+          line-height .8rem
         .introduce
           overflow hidden
           white-space nowrap
@@ -302,11 +304,13 @@
           font-size .5rem
           width 40%
           text-align center
+          height .7rem
+          line-height .7rem
+          margin-bottom .3rem
         .presentation
           overflow hidden
           white-space nowrap
           text-overflow ellipsis
-          font-size .5rem
           display inline-block
           width 3rem
         .txt
