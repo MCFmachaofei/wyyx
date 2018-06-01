@@ -16,4 +16,4 @@ Mock.mock('/home', {code:0, home: home_data})
 Mock.mock('/detail', {code:0, detail: shiwu_data})
 //返回分类页nav数据
 Mock.mock('/nav', {code:0, nav:data_nav})
-
+// 返回识物data 数据

@@ -1,88 +1,11 @@
 <template>
   <div class="wrapper">
     <ul class="content">
-      <li class="list">
+      <li class="list" v-for="(item,index) in detail.column" :key="index">
         <div class="show">
-          <img src="./images/1.png" alt="">
-          <div class="topNum">317篇文章</div>
-          <div class="Stitle">严选推荐</div>
-        </div>
-      </li>
-      <li class="list">
-        <div class="show">
-          <img src="./images/1.png" alt="">
-          <div class="topNum">317篇文章</div>
-          <div class="Stitle">严选推荐</div>
-        </div>
-      </li>
-      <li class="list">
-        <div class="show">
-          <img src="./images/1.png" alt="">
-          <div class="topNum">317篇文章</div>
-          <div class="Stitle">严选推荐</div>
-        </div>
-      </li>
-      <li class="list">
-        <div class="show">
-          <img src="./images/1.png" alt="">
-          <div class="topNum">317篇文章</div>
-          <div class="Stitle">严选推荐</div>
-        </div>
-      </li>
-      <li class="list">
-        <div class="show">
-          <img src="./images/1.png" alt="">
-          <div class="topNum">317篇文章</div>
-          <div class="Stitle">严选推荐</div>
-        </div>
-      </li>
-      <li class="list">
-        <div class="show">
-          <img src="./images/1.png" alt="">
-          <div class="topNum">317篇文章</div>
-          <div class="Stitle">严选推荐</div>
-        </div>
-      </li>
-      <li class="list">
-        <div class="show">
-          <img src="./images/1.png" alt="">
-          <div class="topNum">317篇文章</div>
-          <div class="Stitle">严选推荐</div>
-        </div>
-      </li>
-      <li class="list">
-        <div class="show">
-          <img src="./images/1.png" alt="">
-          <div class="topNum">317篇文章</div>
-          <div class="Stitle">严选推荐</div>
-        </div>
-      </li>
-      <li class="list">
-        <div class="show">
-          <img src="./images/1.png" alt="">
-          <div class="topNum">317篇文章</div>
-          <div class="Stitle">严选推荐</div>
-        </div>
-      </li>
-      <li class="list">
-        <div class="show">
-          <img src="./images/1.png" alt="">
-          <div class="topNum">317篇文章</div>
-          <div class="Stitle">严选推荐</div>
-        </div>
-      </li>
-      <li class="list">
-        <div class="show">
-          <img src="./images/1.png" alt="">
-          <div class="topNum">317篇文章</div>
-          <div class="Stitle">严选推荐</div>
-        </div>
-      </li>
-      <li class="list">
-        <div class="show">
-          <img src="./images/1.png" alt="">
-          <div class="topNum">317篇文章</div>
-          <div class="Stitle">严选推荐</div>
+          <img :src="item.picUrl">
+          <div class="topNum">{{item.articleCount}}</div>
+          <div class="Stitle">{{item.title}}</div>
         </div>
       </li>
     </ul>
@@ -90,12 +13,17 @@
 </template>
 <script>
   import BScroll from 'better-scroll'
+  import {mapState} from 'vuex'
   export default {
     mounted(){
       new BScroll('.wrapper', {
         scrollX:true,
         click:true
-      })
+      }),
+      this.$store.dispatch('getDetail')
+  },
+    computed:{
+      ...mapState(['detail'])
     }
   }
 </script>
@@ -105,7 +33,7 @@
     color #333
     padding-top 1rem
     .content
-      width 78rem
+      width 45rem
       color #7e8c8d
       .list
         margin-right 1rem
@@ -133,6 +61,7 @@
             color #333
             font-size .6rem
             line-height 1
-            width 2.5rem
+            width 3rem
             margin-left 1.5rem
+            text-align center
 </style>

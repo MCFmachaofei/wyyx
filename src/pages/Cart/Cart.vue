@@ -19,11 +19,26 @@
       <img src="./image/cart.png" alt="购物车">
       <div class="add">去添加点什么吧</div>
     </div>
-   <button>登陆</button>
+   <button @click="goLogin">登陆</button>
   </div>
 </template>
 <script>
-  export default {}
+  export default {
+    /*methods:{
+      goPerson:function () {
+        this.$router.push({
+          path:'/person'
+        })
+      }
+    }*/
+    methods:{
+      goLogin(){
+        this.$router.push({
+          path:'/login'
+        })
+      }
+    }
+  }
 </script>
 <style lang="stylus" rel="stylesheet/stylus">
   @import "../../common/stylus/mixins.styl"

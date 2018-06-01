@@ -42,104 +42,14 @@
     </div>
     <div class="goods_wrapper">
       <ul class="wrapper_content">
-        <li>
-          <img src="./images/xiaolongxia.png" alt="">
-          <div class="nowtime">十点一刻</div>
-          <span class="introduce">小龙虾 4-6钱 1千克/盒 （800克虾+200克汤）</span>
-          <div class="text">夏季爆品，媲美现煮</div>
+        <li v-for="(item,index) in home.newItemList" :key="index">
+          <img :src="item.scenePicUrl" >
+          <div class="nowtime" v-for="(t,index) in item.itemTagList" :key="index" >{{t.name}}</div>
+          <span class="introduce">{{item.name}}</span>
+          <div class="text">{{item.simpleDesc}}</div>
           <div class="price">
             <span>¥</span>
-            <span>88</span>
-          </div>
-        </li>
-        <li>
-          <img src="./images/xiaolongxia.png" alt="">
-          <div class="nowtime">十点一刻</div>
-          <span class="introduce">小龙虾 4-6钱 1千克/盒 （800克虾+200克汤）</span>
-          <div class="text">夏季爆品，媲美现煮</div>
-          <div class="price">
-            <span>¥</span>
-            <span>88</span>
-          </div>
-        </li>
-        <li>
-          <img src="./images/xiaolongxia.png" alt="">
-          <div class="nowtime">十点一刻</div>
-          <span class="introduce">小龙虾 4-6钱 1千克/盒 （800克虾+200克汤）</span>
-          <div class="text">夏季爆品，媲美现煮</div>
-          <div class="price">
-            <span>¥</span>
-            <span>88</span>
-          </div>
-        </li>
-        <li>
-          <img src="./images/xiaolongxia.png" alt="">
-          <div class="nowtime">十点一刻</div>
-          <span class="introduce">小龙虾 4-6钱 1千克/盒 （800克虾+200克汤）</span>
-          <div class="text">夏季爆品，媲美现煮</div>
-          <div class="price">
-            <span>¥</span>
-            <span>88</span>
-          </div>
-        </li>
-        <li>
-          <img src="./images/xiaolongxia.png" alt="">
-          <div class="nowtime">十点一刻</div>
-          <span class="introduce">小龙虾 4-6钱 1千克/盒 （800克虾+200克汤）</span>
-          <div class="text">夏季爆品，媲美现煮</div>
-          <div class="price">
-            <span>¥</span>
-            <span>88</span>
-          </div>
-        </li>
-        <li>
-          <img src="./images/xiaolongxia.png" alt="">
-          <div class="nowtime">十点一刻</div>
-          <span class="introduce">小龙虾 4-6钱 1千克/盒 （800克虾+200克汤）</span>
-          <div class="text">夏季爆品，媲美现煮</div>
-          <div class="price">
-            <span>¥</span>
-            <span>88</span>
-          </div>
-        </li>
-        <li>
-          <img src="./images/xiaolongxia.png" alt="">
-          <div class="nowtime">十点一刻</div>
-          <span class="introduce">小龙虾 4-6钱 1千克/盒 （800克虾+200克汤）</span>
-          <div class="text">夏季爆品，媲美现煮</div>
-          <div class="price">
-            <span>¥</span>
-            <span>88</span>
-          </div>
-        </li>
-        <li>
-          <img src="./images/xiaolongxia.png" alt="">
-          <div class="nowtime">十点一刻</div>
-          <span class="introduce">小龙虾 4-6钱 1千克/盒 （800克虾+200克汤）</span>
-          <div class="text">夏季爆品，媲美现煮</div>
-          <div class="price">
-            <span>¥</span>
-            <span>88</span>
-          </div>
-        </li>
-        <li>
-          <img src="./images/xiaolongxia.png" alt="">
-          <div class="nowtime">十点一刻</div>
-          <span class="introduce">小龙虾 4-6钱 1千克/盒 （800克虾+200克汤）</span>
-          <div class="text">夏季爆品，媲美现煮</div>
-          <div class="price">
-            <span>¥</span>
-            <span>88</span>
-          </div>
-        </li>
-        <li>
-          <img src="./images/xiaolongxia.png" alt="">
-          <div class="nowtime">十点一刻</div>
-          <span class="introduce">小龙虾 4-6钱 1千克/盒 （800克虾+200克汤）</span>
-          <div class="text">夏季爆品，媲美现煮</div>
-          <div class="price">
-            <span>¥</span>
-            <span>88</span>
+            <span>{{item.retailPrice}}</span>
           </div>
         </li>
       </ul>
@@ -151,124 +61,14 @@
     </div>
     <div class="faddish_wrapper">
       <ul class="faddish_content">
-        <li>
-          <img src="./images/yagao.png" alt="yagao">
-          <div class="vogue">爆款</div>
-          <span class="presentation">日式和风声波式电动牙刷（可单买刷头）</span>
-          <div class="txt">累计销量百万，洁齿必备基础款</div>
+        <li v-for="(item,index) in home.popularItemList" :key="index">
+          <img :src="item.listPicUrl">
+          <div class="vogue" v-for="(t,index) in item.itemTagList" :key="index">{{t.name}}</div>
+          <span class="presentation">{{item.name}}</span>
+          <div class="txt">{{item.simpleDesc}}</div>
           <div class="price">
             <span>¥</span>
-            <span>129</span>
-          </div>
-        </li>
-        <li>
-          <img src="./images/yagao.png" alt="yagao">
-          <div class="vogue">爆款</div>
-          <span class="presentation">日式和风声波式电动牙刷（可单买刷头）</span>
-          <div class="txt">累计销量百万，洁齿必备基础款</div>
-          <div class="price">
-            <span>¥</span>
-            <span>129</span>
-          </div>
-        </li>
-        <li>
-          <img src="./images/yagao.png" alt="yagao">
-          <div class="vogue">爆款</div>
-          <span class="presentation">日式和风声波式电动牙刷（可单买刷头）</span>
-          <div class="txt">累计销量百万，洁齿必备基础款</div>
-          <div class="price">
-            <span>¥</span>
-            <span>129</span>
-          </div>
-        </li>
-        <li>
-          <img src="./images/yagao.png" alt="yagao">
-          <div class="vogue">爆款</div>
-          <span class="presentation">日式和风声波式电动牙刷（可单买刷头）</span>
-          <div class="txt">累计销量百万，洁齿必备基础款</div>
-          <div class="price">
-            <span>¥</span>
-            <span>129</span>
-          </div>
-        </li>
-        <li>
-          <img src="./images/yagao.png" alt="yagao">
-          <div class="vogue">爆款</div>
-          <span class="presentation">日式和风声波式电动牙刷（可单买刷头）</span>
-          <div class="txt">累计销量百万，洁齿必备基础款</div>
-          <div class="price">
-            <span>¥</span>
-            <span>129</span>
-          </div>
-        </li>
-        <li>
-          <img src="./images/yagao.png" alt="yagao">
-          <div class="vogue">爆款</div>
-          <span class="presentation">日式和风声波式电动牙刷（可单买刷头）</span>
-          <div class="txt">累计销量百万，洁齿必备基础款</div>
-          <div class="price">
-            <span>¥</span>
-            <span>129</span>
-          </div>
-        </li>
-        <li>
-          <img src="./images/yagao.png" alt="yagao">
-          <div class="vogue">爆款</div>
-          <span class="presentation">日式和风声波式电动牙刷（可单买刷头）</span>
-          <div class="txt">累计销量百万，洁齿必备基础款</div>
-          <div class="price">
-            <span>¥</span>
-            <span>129</span>
-          </div>
-        </li>
-        <li>
-          <img src="./images/yagao.png" alt="yagao">
-          <div class="vogue">爆款</div>
-          <span class="presentation">日式和风声波式电动牙刷（可单买刷头）</span>
-          <div class="txt">累计销量百万，洁齿必备基础款</div>
-          <div class="price">
-            <span>¥</span>
-            <span>129</span>
-          </div>
-        </li>
-        <li>
-          <img src="./images/yagao.png" alt="yagao">
-          <div class="vogue">爆款</div>
-          <span class="presentation">日式和风声波式电动牙刷（可单买刷头）</span>
-          <div class="txt">累计销量百万，洁齿必备基础款</div>
-          <div class="price">
-            <span>¥</span>
-            <span>129</span>
-          </div>
-        </li>
-        <li>
-          <img src="./images/yagao.png" alt="yagao">
-          <div class="vogue">爆款</div>
-          <span class="presentation">日式和风声波式电动牙刷（可单买刷头）</span>
-          <div class="txt">累计销量百万，洁齿必备基础款</div>
-          <div class="price">
-            <span>¥</span>
-            <span>129</span>
-          </div>
-        </li>
-        <li>
-          <img src="./images/yagao.png" alt="yagao">
-          <div class="vogue">爆款</div>
-          <span class="presentation">日式和风声波式电动牙刷（可单买刷头）</span>
-          <div class="txt">累计销量百万，洁齿必备基础款</div>
-          <div class="price">
-            <span>¥</span>
-            <span>129</span>
-          </div>
-        </li>
-        <li>
-          <img src="./images/yagao.png" alt="yagao">
-          <div class="vogue">爆款</div>
-          <span class="presentation">日式和风声波式电动牙刷（可单买刷头）</span>
-          <div class="txt">累计销量百万，洁齿必备基础款</div>
-          <div class="price">
-            <span>¥</span>
-            <span>129</span>
+            <span>{{item.retailPrice}}</span>
           </div>
         </li>
       </ul>
@@ -398,8 +198,6 @@
                 img
                   display inline-block
                   width 100%
-
-
     ul
       .label_content
         float left

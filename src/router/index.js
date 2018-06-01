@@ -8,6 +8,7 @@ import Identify from '../pages/Identify/Identify.vue'
 import Classify from '../pages/Classify/Classify.vue'
 import Cart from '../pages/Cart/Cart.vue'
 import Person from '../pages/Person/Person.vue'
+import Login from '../pages/Login/Login.vue'
 
 
 //声明使用插件
@@ -17,23 +18,39 @@ export default new VueRouter ({
   routes:[
     {
       path:'/home',
-      component:Home
+      component:Home,
+      meta: {
+        showFooter: true
+      }
     },
     {
       path:'/identify',
-      component:Identify
+      component:Identify,
+      meta: {
+        showFooter: true
+      }
     },
     {
       path:'/classify',
-      component:Classify
+      component:Classify,
+      meta: {
+        showFooter: true
+      }
     },
     {
       path:'/cart',
-      component:Cart
+      component:Cart,
+      meta: {
+        showFooter: true
+      }
     },
     {
       path:'/person',
       component:Person
+    },
+    {
+      path:'/login',
+      component:Login
     },
     {
       path:'/',
