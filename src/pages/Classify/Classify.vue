@@ -51,7 +51,7 @@
     .m-itemCateListHd
       border-bottom 1px solid #999
       display flex
-      height 1rem
+      height 1.3rem
       position fixed!important;
       left 0
       top 0
@@ -61,7 +61,6 @@
       padding 0 .5rem
       background-color #fff
       .m-topSearchIpt
-        padding .2rem .3rem .2rem .3rem
         overflow hidden
         position relative
         width 9rem
@@ -72,6 +71,7 @@
         font-size .4rem
         background-color #ededed
         border-radius .2rem
+        margin-left 2rem
         .icon
           display inline-block
           vertical-align middle
@@ -83,11 +83,11 @@
           margin-right .2rem
         .placeholder
           color #666
-          font-size .4rem
+          font-size .6rem
     .m-cateNavVertWrap
       border-right 1px solid #999
       position fixed
-      top 1.5rem
+      top 0.5rem
       left 0
       bottom 0
       z-index 4
@@ -95,31 +95,31 @@
       background-color #fff
       margin-top 1rem
       .j-cateNav
-        height 91%
-        padding-bottom 1.84rem
+        height 70%
+        padding-bottom 1rem
         display flex
         justify-content space-between
         align-items center
         flex-wrap wrap
         .item
           width 100%
-          height 1.5rem
+          height 1.6rem
           text-align center
           border none
           display block
           color #333
           font-size .6rem
-          line-height 1rem
+          line-height .8rem
           text-overflow  ellipsis
           white-space nowrap
           overflow hidden
           &.active
             font-size .6rem
             color #ab2b2b
-            line-height .8rem
+            line-height 1.4rem
             text-overflow ellipsis
             white-space nowrap
             overflow hidden
-            border-left 4px solid #ab2b2b
+            border-left 2px solid #ab2b2b
             width 3.5rem
 </style>

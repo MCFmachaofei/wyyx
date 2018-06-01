@@ -14,7 +14,6 @@
 ## 3.	项目结构分析
     项目功能分析，准备相关资源，设计项目src目录
 
-# day01
 ## 1. 搭建项目整体界面结构
     stylus的理解和使用
         结构化, 变量, 函数/minxin(混合)
@@ -24,11 +23,17 @@
         $route: 当前路由对象, 一些当前路由信息数据的容器, path/meta/query/params
     项目路由拆分
     底部导航组件: FooterGuide
-    导航路由组件: Msite/Search/Order/Profile
+    导航路由组件: Home/Identify/Classify/Cart/Person
 
 ## 2. 抽取组件
-    头部组件: HeaderTop, 通过slot来实现组件通信标签结构
-    商家列表组件: ShopList
+    头部组件: HeaderTop 
+    Home页底部组件 BottomFooter
+    发现更多 DetailFindMore
+    回到顶部组件 GoTop
+    使用组件步骤
+     1.使用组件页面引入组件
+     2.映射成组件标签
+     3.写标签到相应的html对应位置
     
 ## 3. 登陆路由组件
      静态组件

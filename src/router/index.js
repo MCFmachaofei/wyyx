@@ -1,4 +1,6 @@
 /*路由器对象模块*/
+
+
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../pages/Home/Home.vue'

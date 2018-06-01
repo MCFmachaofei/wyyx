@@ -32,7 +32,6 @@
 </script>
 <style lang="stylus" rel="stylesheet/stylus">
   .m-subCateList
-    height 89%
     background #ffffff
     position absolute
     right 0
@@ -47,6 +46,7 @@
       img
         width 100%
         border-radius 4px
+        margin 1rem 0 0 .5rem
     .cateList
       .hd
         height 1.5rem
@@ -64,14 +64,14 @@
             height 1.5rem
             line-height 1.5rem
             text-align center
-            font-size 1rem
+            font-size .6rem
             color #333
       .list
         .cateItem
           float left
           margin-bottom 4rem
           width 3.2rem
-          height 2.5rem
+          height 2rem
           margin-left .8rem
           .cateImgWrapper
             img
@@ -80,7 +80,7 @@
               background #fff
             .name
               height 1rem
-              font-size .8rem
+              font-size .6rem
               color #333
               text-align center
 </style>
