@@ -24,13 +24,6 @@
 </template>
 <script>
   export default {
-    /*methods:{
-      goPerson:function () {
-        this.$router.push({
-          path:'/person'
-        })
-      }
-    }*/
     methods:{
       goLogin(){
         this.$router.push({
